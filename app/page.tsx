@@ -1,69 +1,22 @@
+import { ArrowDown, ArrowUp, BriefcaseBusiness, Check, GitFork, Mail, MoveUpRight } from "lucide-react";
 import Image from "next/image";
+import { Navigation } from "./components/navigation";
+import { ProjectCards, SkillCards } from "./components/portfolio-cards";
+import { SectionHeading } from "./components/section-heading";
+import { navigation, portfolio, projects } from "./data/portfolio";
+
+const socialIcons = { mail: Mail, github: GitFork, linkedin: BriefcaseBusiness };
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  return <>
+    <Navigation />
+    <main>
+      <section id="home" className="hero-shell scroll-mt-20"><div className="hero-grid" aria-hidden="true" /><div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 sm:py-32 lg:grid-cols-[1.2fr_.8fr] lg:gap-20"><div className="relative z-10"><p className="section-eyebrow">{portfolio.introLabel}</p><h1 className="mt-5 text-4xl font-semibold tracking-[-0.055em] text-[var(--ink)] sm:text-6xl lg:text-7xl">{portfolio.name}</h1><p className="mt-5 text-xl font-medium text-[var(--sage)] sm:text-2xl">{portfolio.role}</p><p className="mt-7 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">{portfolio.intro}</p><div className="mt-9 flex flex-col gap-3 sm:flex-row"><a className="button" href="#projects">View My Work <ArrowDown size={17} aria-hidden="true" /></a><a className="button button-secondary" href="#contact">Get In Touch <MoveUpRight size={17} aria-hidden="true" /></a></div></div><div className="relative mx-auto w-full max-w-sm"><div className="hero-orbit hero-orbit-one" aria-hidden="true" /><div className="hero-orbit hero-orbit-two" aria-hidden="true" /><div className="identity-card"><div className="identity-mark"><Image src={portfolio.profileImage} alt={`Portrait of ${portfolio.name}`} fill priority sizes="(max-width: 640px) 100vw, 24rem" className="profile-image" /></div><div className="mt-7 border-t border-[var(--border)] pt-5"><p className="text-xs font-medium uppercase tracking-[0.16em] text-[var(--muted)]">Digital problem solving</p><p className="mt-2 text-sm font-medium text-[var(--ink)]">Systems · Support · Web</p></div></div></div></div></section>
+      <section id="about" className="section scroll-mt-20"><div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-24"><SectionHeading eyebrow="About" title="A Little About Me" /><div><p className="text-lg leading-8 text-[var(--muted)]">{portfolio.about}</p><ul className="mt-8 space-y-4">{portfolio.aboutPoints.map((point) => <li key={point} className="flex gap-3 text-sm leading-6 text-[var(--ink)]"><span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--sage-pale)] text-[var(--sage)]"><Check size={13} strokeWidth={3} aria-hidden="true" /></span>{point}</li>)}</ul></div></div></section>
+      <section id="skills" className="section section-muted scroll-mt-20"><div className="mx-auto max-w-6xl px-5 sm:px-8"><SectionHeading eyebrow="Capabilities" title="Skills & Expertise" description="A focused collection of practical IT, systems, and web development skills." /><div className="mt-10"><SkillCards /></div></div></section>
+      <section id="projects" className="section scroll-mt-20"><div className="mx-auto max-w-6xl px-5 sm:px-8"><SectionHeading eyebrow="Portfolio" title="Selected Work" description="Representative work areas and projects, with details to be added as they become available." /><div className="mt-10"><ProjectCards projects={projects} /></div></div></section>
+      <section id="contact" className="section section-muted scroll-mt-20"><div className="mx-auto max-w-6xl px-5 sm:px-8"><div className="contact-panel"><div><SectionHeading eyebrow="Contact" title="Let&apos;s Work Together" description="Have a project in mind, a technical challenge, or an opportunity to collaborate? I&apos;d be happy to connect." /><a href={`mailto:${portfolio.email}`} className="button mt-8">Start a Conversation <Mail size={17} aria-hidden="true" /></a></div><div className="divide-y divide-[var(--border)]">{portfolio.socials.map((social) => { const Icon = socialIcons[social.icon]; return social.href ? <a key={social.label} href={social.href} className="contact-link"><span className="icon-tile icon-tile-small"><Icon size={17} aria-hidden="true" /></span><span><span className="block text-sm font-medium text-[var(--ink)]">{social.label}</span><span className="block text-sm text-[var(--muted)]">{social.value}</span></span><MoveUpRight className="ml-auto text-[var(--sage)]" size={18} aria-hidden="true" /></a> : <div key={social.label} className="contact-link opacity-75"><span className="icon-tile icon-tile-small"><Icon size={17} aria-hidden="true" /></span><span><span className="block text-sm font-medium text-[var(--ink)]">{social.label}</span><span className="block text-sm text-[var(--muted)]">{social.value} · Add link</span></span></div>; })}</div></div></div></section>
+    </main>
+    <footer className="border-t border-[var(--border)]"><div className="mx-auto flex max-w-6xl flex-col gap-5 px-5 py-8 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between sm:px-8"><p>© 2026 {portfolio.name}. All rights reserved.</p><div className="flex flex-wrap items-center gap-x-5 gap-y-3">{navigation.slice(1).map((item) => <a key={item.href} className="nav-link" href={item.href}>{item.label}</a>)}<a href="#home" className="inline-flex items-center gap-1.5 font-medium text-[var(--sage)]">Back to Top <ArrowUp size={15} aria-hidden="true" /></a></div></div></footer>
+  </>;
 }
