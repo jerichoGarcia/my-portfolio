@@ -3,17 +3,20 @@ export const portfolio = {
   initials: "JG",
   role: "IT Specialist",
   profileImage: "/jericho-garcia-profile.png",
-  email: "your.email@example.com",
+  email: "personal.garciajericho@gmail.com",
   introLabel: "Hello, I'm Jericho",
   intro:
     "Passionate about technology, IT solutions, troubleshooting, and building practical digital experiences. Focused on solving problems, improving systems, and continuously learning new technologies.",
   about:
     "I am an IT Specialist interested in helping people and teams make technology work better. My focus spans technical support, hardware and software troubleshooting, computer systems maintenance, networking, system administration, and web development.",
   aboutPoints: ["Thoughtful technical support and clear problem solving", "Reliable systems, maintenance, and configuration", "Practical web experiences built with modern tools"],
-  socials: [
-    { label: "Email", value: "your.email@example.com", href: "mailto:your.email@example.com", icon: "mail" },
-    { label: "GitHub", value: "github.com/your-username", href: undefined, icon: "github" },
-    { label: "LinkedIn", value: "linkedin.com/in/your-profile", href: undefined, icon: "linkedin" },
+  contacts: [
+    { label: "Email", value: "personal.garciajericho@gmail.com", href: "mailto:personal.garciajericho@gmail.com", icon: "mail", external: false },
+    { label: "Phone", value: "+639054190506", href: "tel:+639054190506", icon: "phone", external: false },
+    { label: "Location", value: "South Caloocan, Metro Manila, Philippines", href: "https://maps.google.com/?q=South+Caloocan,+Metro+Manila,+Philippines", icon: "location", external: true },
+    { label: "GitHub", value: "github.com/jerichoGarcia", href: "https://github.com/jerichoGarcia", icon: "github", external: true },
+    { label: "LinkedIn", value: "linkedin.com/in/jericho-garcia-bb41b7340", href: "https://www.linkedin.com/in/jericho-garcia-bb41b7340/", icon: "linkedin", external: true },
+    { label: "Facebook", value: "facebook.com/share/1C6KjZDrJo", href: "https://www.facebook.com/share/1C6KjZDrJo/", icon: "facebook", external: true },
   ],
 } as const;
 
