@@ -31,6 +31,19 @@ export const skillGroups = [
   { icon: "monitor", title: "Tools & Technologies", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office"] },
 ] as const;
 
+export const experience = {
+  company: "Enshored Inc.",
+  position: "Content Moderator",
+  period: "April 2024 – February 2025",
+  description:
+    "Worked as a Content Moderator at Enshored Inc., reviewing user-generated content to uphold quality and compliance standards. Developed strong attention to detail, accuracy, and problem-solving skills while managing high-volume workloads and collaborating with team members.",
+  responsibilities: [
+    { icon: "shield", title: "Content Review & Quality Assurance", description: "Reviewed and moderated user-generated content while maintaining established quality and compliance standards." },
+    { icon: "target", title: "Productivity & Accuracy", description: "Maintained productivity and accuracy while handling high-volume workloads." },
+    { icon: "users", title: "Case Resolution & Collaboration", description: "Resolved complex cases by following established procedures and collaborating with team members." },
+  ],
+} as const;
+
 export const projects = [
   { title: "Client Management System", description: "A web-based application for organizing client information, managing records, and tracking client statuses.", tags: ["Web Application", "Client Records", "Workflow"], visual: "records" },
   { title: "IT Support & Troubleshooting", description: "A collection of technical support work, troubleshooting processes, and practical IT solutions.", tags: ["IT Support", "Diagnostics", "Documentation"], visual: "support" },
