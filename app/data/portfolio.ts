@@ -4,6 +4,7 @@ export const portfolio = {
   role: "IT Specialist",
   profileImage: "/jericho-garcia-profile.png",
   email: "personal.garciajericho@gmail.com",
+  emailSubject: "Portfolio Inquiry - Jericho Garcia",
   introLabel: "Hello, I'm Jericho",
   intro:
     "Passionate about technology, IT solutions, troubleshooting, and building practical digital experiences. Focused on solving problems, improving systems, and continuously learning new technologies.",
