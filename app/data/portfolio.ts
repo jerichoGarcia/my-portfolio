@@ -5,6 +5,10 @@ export const portfolio = {
   profileImage: "/jericho-garcia-profile.png",
   email: "personal.garciajericho@gmail.com",
   emailSubject: "Portfolio Inquiry - Jericho Garcia",
+  cv: {
+    href: "/Jericho-Garcia-CV.pdf",
+    filename: "Jericho-Garcia-CV.pdf",
+  },
   introLabel: "Hello, I'm Jericho",
   intro:
     "Passionate about technology, IT solutions, troubleshooting, and building practical digital experiences. Focused on solving problems, improving systems, and continuously learning new technologies.",
