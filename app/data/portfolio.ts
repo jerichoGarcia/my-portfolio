@@ -36,6 +36,34 @@ export const skillGroups = [
   { icon: "monitor", title: "Tools & Technologies", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office", "Cisco Packet Tracer", "OpenAI Codex", "ChatGPT"] },
 ] as const;
 
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+}
+
+export type CertificationIcon = "database" | "code" | "network" | "server" | "business";
+
+export interface Certification {
+  title: string;
+  category: string;
+  icon: CertificationIcon;
+}
+
+export const education: Education = {
+  degree: "Bachelor of Science in Information Technology",
+  institution: "STI College of Balagtas",
+  period: "September 2021 – June 2025",
+};
+
+export const certifications: readonly Certification[] = [
+  { title: "Oracle Database Foundation", category: "Databases", icon: "database" },
+  { title: "Oracle Java Foundation", category: "Programming", icon: "code" },
+  { title: "Huawei Network Foundation", category: "Networking", icon: "network" },
+  { title: "Linux Professional Institute – System Administration", category: "Systems Administration", icon: "server" },
+  { title: "SAP Business One – FIT Academy", category: "Business Software", icon: "business" },
+];
+
 export const experience = {
   company: "Enshored Inc.",
   position: "Content Moderator",
