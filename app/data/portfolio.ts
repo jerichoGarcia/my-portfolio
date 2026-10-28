@@ -26,10 +26,10 @@ export const navigation = [
 ] as const;
 
 export const skillGroups = [
-  { icon: "wrench", title: "IT Support", skills: ["Hardware Troubleshooting", "Software Installation", "Windows Troubleshooting", "System Maintenance"] },
-  { icon: "network", title: "Networking & Systems", skills: ["Basic Networking", "Network Troubleshooting", "System Configuration"] },
-  { icon: "code", title: "Web Development", skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js"] },
-  { icon: "monitor", title: "Tools & Technologies", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office"] },
+  { icon: "wrench", title: "IT Support", skills: ["Hardware Troubleshooting", "Software Installation", "Windows Troubleshooting", "System Maintenance", "CCTV Installation"] },
+  { icon: "network", title: "Networking & Systems", skills: ["Basic Networking", "Network Troubleshooting", "System Configuration", "Basic pfSense Firewall Setup"] },
+  { icon: "code", title: "Web Development", skills: ["AI-Assisted Development (Vibe Coding)", "HTML & CSS", "JavaScript Fundamentals", "Java Fundamentals", "C# Fundamentals", "Python Fundamentals"] },
+  { icon: "monitor", title: "Tools & Technologies", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office", "Cisco Packet Tracer", "OpenAI Codex", "ChatGPT"] },
 ] as const;
 
 export const experience = {
