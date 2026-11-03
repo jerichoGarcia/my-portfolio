@@ -13,7 +13,7 @@ export const portfolio = {
   intro:
     "Passionate about technology, IT solutions, troubleshooting, and building practical digital experiences. Focused on solving problems, improving systems, and continuously learning new technologies.",
   about:
-    "I am an IT Specialist interested in helping people and teams make technology work better. My focus spans technical support, hardware and software troubleshooting, computer systems maintenance, networking, system administration, and web development.",
+    "I'm an IT Technical Support professional who enjoys solving technical problems and helping people make the most of technology. My experience includes troubleshooting hardware, software, and network connectivity issues, providing end-user assistance, and maintaining computer systems to support daily business operations.\n\nBeyond technical support, I've gained hands-on experience in CCTV installation, IT equipment configuration, asset management, and basic pfSense firewall setup. I value practical problem-solving, continuous learning, and finding reliable solutions that make technology easier and more efficient for others.",
   aboutPoints: ["Thoughtful technical support and clear problem solving", "Reliable systems, maintenance, and configuration", "Practical web experiences built with modern tools"],
   contacts: [
     { label: "Email", value: "personal.garciajericho@gmail.com", href: "mailto:personal.garciajericho@gmail.com", icon: "mail", external: false },
