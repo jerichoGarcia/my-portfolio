@@ -30,10 +30,10 @@ export const navigation = [
 ] as const;
 
 export const skillGroups = [
-  { icon: "wrench", title: "IT Support", skills: ["Hardware Troubleshooting", "Software Installation", "Windows Troubleshooting", "System Maintenance", "CCTV Installation"] },
-  { icon: "network", title: "Networking & Systems", skills: ["Basic Networking", "Network Troubleshooting", "System Configuration", "Basic pfSense Firewall Setup"] },
-  { icon: "code", title: "Web Development", skills: ["AI-Assisted Development (Vibe Coding)", "HTML & CSS", "JavaScript Fundamentals", "Java Fundamentals", "C# Fundamentals", "Python Fundamentals"] },
-  { icon: "monitor", title: "Tools & Technologies", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office", "Cisco Packet Tracer", "OpenAI Codex", "ChatGPT"] },
+  { icon: "wrench", title: "IT Support", image: "/images/skills/it-support.webp", imageAlt: "Computer repair workspace with hardware tools", skills: ["Hardware Troubleshooting", "Software Installation", "Windows Troubleshooting", "System Maintenance", "CCTV Installation"] },
+  { icon: "network", title: "Networking & Systems", image: "/images/skills/networking-systems.webp", imageAlt: "Network equipment with organized Ethernet connections", skills: ["Basic Networking", "Network Troubleshooting", "System Configuration", "Basic pfSense Firewall Setup"] },
+  { icon: "code", title: "Web Development", image: "/images/skills/web-development.webp", imageAlt: "Laptop on a clean software development desk", skills: ["AI-Assisted Development (Vibe Coding)", "HTML & CSS", "JavaScript Fundamentals", "Java Fundamentals", "C# Fundamentals", "Python Fundamentals"] },
+  { icon: "monitor", title: "Tools & Technologies", image: "/images/skills/tools-technologies.webp", imageAlt: "Technology workspace with a monitor and IT devices", skills: ["Visual Studio Code", "Git & GitHub", "Windows", "Microsoft Office", "Cisco Packet Tracer", "OpenAI Codex", "ChatGPT"] },
 ] as const;
 
 export interface Education {
